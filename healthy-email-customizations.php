@@ -68,13 +68,28 @@ if ( ! function_exists( 'wp_new_user_notification' ) ) {
         // The subject line of the welcome email.
         $welcome_subject = esc_html__( 'Welcome to The Healty Futures Challenge!', 'healthy-email-customizations' );
 
+        // Thanks text.
+        $thanks = esc_html__( 'Thanks for signing up!', 'healthy-email-customizations' );
+
+        // UN text.
+        $un = esc_html__( 'Your user name:', 'healthy-email-customizations' );
+
+
+        // PW text.
+        $pw = esc_html__( 'Your password:', 'healthy-email-customizations' );
+
+
+        // Get started text.
+        $start = esc_html__( 'Get started by logging in here:', 'healthy-email-customizations' );
+
+
         $welcome_message = "
         <p><center><a href='$home_url'><img height=200 width=200 src='$logo_src' alt='$subject'></a></center></p>
         <h2><center><a style='color: $accent_color' href='$home_url'>$welcome_subject</a><center></h2>
-        <p>Thanks for signing up!</p>
-        <p>Your user name: <b>$user_login</b></p>
-        <p>Your password: <b>$plaintext_pass</b></p>
-        <p>Get started by logging in here: <i><a style='color: $accent_color' href='$home_url'>$home_url</a></i></p>
+        <p>$thanks</p>
+        <p>$un <b>$user_login</b></p>
+        <p>$pw <b>$plaintext_pass</b></p>
+        <p>$start <i><a style='color: $accent_color' href='$home_url'>$home_url</a></i></p>
         ";
         
         // Send a welcome email to the new user.
