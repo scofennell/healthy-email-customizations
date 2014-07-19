@@ -66,7 +66,7 @@ if ( ! function_exists( 'wp_new_user_notification' ) ) {
         $admin_message  = sprintf( esc_html__( 'A new user has been created: %s', 'healthy-email-customizations' ), $user_email );
 
         // The subject line of the welcome email.
-        $welcome_subject = esc_html__( 'Welcome to The Healty Futures Challenge!', 'healthy-email-customizations' );
+        $welcome_subject = esc_html__( 'Welcome to The Healthy Futures Challenge!', 'healthy-email-customizations' );
 
         // Thanks text.
         $thanks = esc_html__( 'Thanks for signing up!', 'healthy-email-customizations' );
