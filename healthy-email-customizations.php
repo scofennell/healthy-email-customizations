@@ -67,6 +67,7 @@ if ( ! function_exists( 'wp_new_user_notification' ) ) {
 
         // The subject line of the welcome email.
         $welcome_subject = esc_html__( 'Welcome to The Healthy Futures Challenge!', 'healthy-email-customizations' );
+        $welcome_subject_attr = esc_attr__( 'Welcome to The Healthy Futures Challenge!', 'healthy-email-customizations' );
 
         // Thanks text.
         $thanks = esc_html__( 'Thanks for signing up!', 'healthy-email-customizations' );
@@ -84,7 +85,7 @@ if ( ! function_exists( 'wp_new_user_notification' ) ) {
 
 
         $welcome_message = "
-        <p><center><a href='$home_url'><img height=200 width=200 src='$logo_src' alt='$subject'></a></center></p>
+        <p><center><a href='$home_url'><img height=200 width=200 src='$logo_src' alt='$welcome_subject_attr'></a></center></p>
         <h2><center><a style='color: $accent_color' href='$home_url'>$welcome_subject</a><center></h2>
         <p>$thanks</p>
         <p>$un <b>$user_login</b></p>
